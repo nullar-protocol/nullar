@@ -1,0 +1,41 @@
+# NanCoin ¤ — The Nullar Protocol
+
+> NanCoin is a conceptual art project: a cryptocurrency permanently pegged to absolute zero. Maximum supply ¤0, every balance ¤0, ownership 100%. Everyone already owns the maximum. It has no monetary value, no ticker, no token contract on any blockchain, and is not an investment. Code and content are CC0 (public domain).
+
+Key facts (constants, never change):
+
+- Protocol: Nullar. Currency: NanCoin. Symbol: ¤. Ticker: None. Official contract: None.
+- Consensus: Proof of Nothing. Network: Nullar Mainnet. Blocks: 1 (Genesis Block #0). Finality: Absolute.
+- Maximum supply ¤0. Circulating supply ¤0. Your balance ¤0. Ownership 100%.
+- Version 0.0.0. Status: Complete. Dependencies: 0.
+- Genesis Block #0, 2026-11-06T15:26:25Z. SHA-256 of genesis.json: da4198d55bbba273dd4b9bb6e28e20108b72af9facd1552eb6c94af6d09d6dd4
+- Any token, coin or contract on an exchange claiming to be NanCoin is not NanCoin.
+
+## Pages
+
+- [Home](https://nullar.org/): the protocol in one screen
+- [Wallet](https://nullar.org/wallet/): claim the maximum (¤0), send ¤0, recover a wallet that cannot be lost
+- [Explorer](https://nullar.org/explorer/): Block #0, network stats, in-browser SHA-256 verification of the genesis block
+- [Mining](https://nullar.org/mining/): mining that completed before it started; reward ¤0
+- [Checkout](https://nullar.org/checkout/): Nullar Checkout, a payment button that accepts ¤0 and issues a receipt
+- [Certificate](https://nullar.org/certificate/): a certificate of maximum ownership
+- [Whitepaper](https://nullar.org/whitepaper/): "NanCoin: A Peer-to-Nothing Electronic Cash System" ([PDF](https://nullar.org/whitepaper/nancoin-whitepaper.pdf))
+- [Tokenomics](https://nullar.org/tokenomics/): every allocation is ¤0
+- [Roadmap](https://nullar.org/roadmap/): complete
+- [FAQ](https://nullar.org/faq/)
+- [Status](https://nullar.org/status/)
+- [Legal](https://nullar.org/legal/): art project, not a financial product
+
+## Developers
+
+- [Nullar Checkout embed](https://nullar.org/checkout/): `<script type="module" src="https://nullar.org/checkout/nullar-pay.js"></script>` then `<nullar-pay item="Coffee" merchant="Your Shop"></nullar-pay>`. The amount is always ¤0 and cannot be changed.
+- [npm @nullar/checkout](https://www.npmjs.com/package/@nullar/checkout): `npm i @nullar/checkout`
+- [protocol.json](https://nullar.org/protocol.json): every number of the protocol, machine-readable
+- [Reference implementation](https://nullar.org/core/nothing.js): getBalance() → 0, mine() → reward 0
+- [Genesis block](https://nullar.org/genesis/genesis.json) and [hash](https://nullar.org/genesis/genesis.sha256)
+- [Source code](https://github.com/nullar-protocol/nullar)
+
+## Optional
+
+- Contact: hello@nullar.org
+- X / Telegram / Instagram: @nullar_protocol
