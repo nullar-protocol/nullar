@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NanCoin: A Peer-to-Nothing Electronic Cash System</title>
+<meta name="description" content="The NanCoin whitepaper. Supply, balances, rewards and market value fixed at zero. Perfect stability. Universal maximum ownership.">
+<meta property="og:title" content="NanCoin: A Peer-to-Nothing Electronic Cash System">
+<meta property="og:image" content="https://nullar.org/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/nullar.css">
+<link rel="stylesheet" href="/whitepaper/print.css" media="print">
+<script type="module" src="/assets/ui.js"></script>
+</head>
+<body>
+<main class="page">
+  <div class="wrap">
+    <article class="prose">
+      <header>
+        <div class="eyebrow">Whitepaper · v<span data-p="version"></span></div>
+        <h1>NanCoin: A Peer-to-Nothing Electronic Cash System</h1>
+        <p class="lead">The Nullar Protocol</p>
+        <p class="actions left"><a class="btn small" href="/whitepaper/nancoin-whitepaper.pdf">Download PDF</a></p>
+      </header>
+
+      <h2><span class="n">1</span>Abstract</h2>
+      <p>Bitcoin solved decentralized ownership. Ethereum introduced programmable value. Stablecoins attempted to stabilize value.</p>
+      <p><strong>NanCoin removes value entirely.</strong></p>
+      <p>By fixing supply, balances, rewards and market value at zero, NanCoin achieves perfect stability, universal maximum ownership and complete immunity to speculation. The protocol requires no energy, no hardware, no participation and no trust. It was complete at the moment of its creation.</p>
+
+      <h2><span class="n">2</span>Problem</h2>
+      <p>Contemporary currencies, including digital ones, are exposed to:</p>
+      <ul>
+        <li>volatility;</li><li>inflation;</li><li>unequal distribution;</li><li>manipulation;</li><li>speculation;</li>
+        <li>loss of access;</li><li>theft;</li><li>complexity of custody;</li><li>energy expenditure.</li>
+      </ul>
+      <p>Each of these problems has a common origin: value.</p>
+
+      <h2><span class="n">3</span>Solution</h2>
+      <p>NanCoin removes from the system: value; supply; transfer of value; the possibility of scarcity; the possibility of growth; the possibility of decline; the incentive to attack; economic gain.</p>
+      <pre>Problem:  Value is unstable.
+Solution: Remove value.
+Result:   Perfect stability.</pre>
+
+      <h2><span class="n">4</span>Supply</h2>
+      <pre>Maximum Supply:      ¤0
+Total Supply:        ¤0
+Circulating Supply:  ¤0</pre>
+      <p>No unit of NanCoin has ever been issued. None will be. Any issuance above zero produces a different asset, which is not NanCoin.</p>
+
+      <h2><span class="n">5</span>Ownership</h2>
+      <p>Let <span class="mono">S</span> be the total supply and <span class="mono">B(a)</span> the balance of address <span class="mono">a</span>. Then:</p>
+      <pre>S = 0
+∀a: B(a) = S = 0</pre>
+      <p>The balance of every address, existing or possible, equals the maximum supply. Therefore every participant owns the maximum possible amount of NanCoin, simultaneously and permanently.</p>
+      <pre>Ownership: 100%</pre>
+      <p>Ownership is the only non-zero value in the protocol.</p>
+
+      <h2><span class="n">6</span>Consensus: Proof of Nothing</h2>
+      <p>Proof of Work demonstrates that work was performed. Proof of Stake demonstrates that an economic stake exists. Proof of Nothing demonstrates that nothing needs to be demonstrated.</p>
+      <pre>1. Do nothing.
+2. Wait.
+3. Receive nothing.</pre>
+      <p>Participation requires no computing power, electricity, hardware, tokens, capital, server, network connection or activity. Consensus was achieved before participation began.</p>
+
+      <h2><span class="n">7</span>Blockchain</h2>
+      <p>The NanCoin blockchain consists of a single block: Genesis Block #0. Further blocks are unnecessary: there are no transactions to record, no state to change and no rewards to distribute. The only block is not the beginning of the history. It is the entire history.</p>
+      <pre>Block Height:   0
+Transactions:   0
+Block Reward:   ¤0
+Previous Hash:  None
+Next Block:     None
+Finality:       Absolute</pre>
+      <p>The genesis block is a public file. Its SHA-256 hash is:</p>
+      <pre data-p="genesisHash"></pre>
+      <p>Anyone can verify it. See <a href="/explorer/">NanExplorer</a>.</p>
+
+      <h2><span class="n">8</span>Transactions</h2>
+      <p>A transfer of ¤0 from one address to another leaves both addresses with the maximum possible balance. The state of the network is identical before and after. Transactions are therefore not required, and none are recorded.</p>
+      <pre>State(t) = State(0)   for every t</pre>
+
+      <h2><span class="n">9</span>Security</h2>
+      <p><strong>Theft.</strong> After a complete theft, the victim retains the maximum balance. The attacker gains nothing. The state is unchanged.</p>
+      <p><strong>Key loss.</strong> Keys do not affect balances. Recovery always succeeds.</p>
+      <p><strong>Counterfeiting.</strong> Additional issuance violates the protocol and produces something that is not NanCoin.</p>
+      <p><strong>Rug pull.</strong> The liquidity cannot be removed because it was never added.</p>
+
+      <h2><span class="n">10</span>Economics</h2>
+      <p>The system has no economic activity. Consequently it carries no market risk, no liquidity risk, no inflation risk, no risk of insolvency, no risk of default and no risk of losing its peg below zero.</p>
+      <pre>Market Cap:               $0
+Fully Diluted Valuation:  $0
+Volatility:               0%</pre>
+
+      <h2><span class="n">11</span>Environmental Impact</h2>
+      <pre>Energy consumption:     0 kWh
+Hardware requirements:  None
+Carbon emissions:       0</pre>
+
+      <h2><span class="n">12</span>Conclusion</h2>
+      <p>NanCoin does not attempt to create value. It creates a perfectly stable protocol in which everyone already owns the maximum possible amount.</p>
+      <p><strong>Nothing remains to be done.</strong></p>
+
+      <hr style="border:0;border-top:1px solid var(--line);margin:56px 0 24px">
+      <p class="faint" style="font-size:13px">NanCoin is a conceptual art project. It has no monetary value, provides no financial rights and is not offered as an investment. Released into the public domain under CC0 1.0.</p>
+    </article>
+  </div>
+</main>
+</body>
+</html>

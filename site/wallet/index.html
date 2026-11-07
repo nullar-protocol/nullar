@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NanWallet — Nullar Protocol</title>
+<meta name="description" content="Your wallet already exists. Balance: ¤0. Ownership: 100%.">
+<meta property="og:title" content="NanWallet — Nullar Protocol">
+<meta property="og:image" content="https://nullar.org/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/nullar.css">
+<script type="module" src="/assets/ui.js"></script>
+<script type="module" src="/wallet/wallet.js"></script>
+</head>
+<body>
+<main class="page">
+  <div class="wrap">
+    <header>
+      <div class="eyebrow">NanWallet · <span data-p="network"></span></div>
+      <h1>Wallet found.</h1>
+      <p class="lead">No registration was required. No private key was generated. Nothing can be lost.</p>
+    </header>
+
+    <section>
+      <div class="stats">
+        <div class="stat"><div class="k">Wallet Status</div><div class="v">Found</div></div>
+        <div class="stat"><div class="k">Balance</div><div class="v" data-p="balance" data-f="supply"></div></div>
+        <div class="stat"><div class="k">Maximum Balance</div><div class="v" data-p="maximumSupply" data-f="supply"></div></div>
+        <div class="stat"><div class="k">Ownership</div><div class="v" data-p="ownership" data-f="pct"></div></div>
+      </div>
+      <p class="mono mt-2">You own the maximum possible amount.</p>
+      <div class="actions left">
+        <button class="btn primary" id="claim">Claim Maximum</button>
+      </div>
+      <div class="result mt-2" id="claim-out" aria-live="polite" hidden></div>
+    </section>
+
+    <section class="grid-2">
+      <div class="panel">
+        <div class="eyebrow">Send</div>
+        <h3>Send NanCoin</h3>
+        <form id="send" class="mt-2" autocomplete="off">
+          <div class="field"><label for="to">Recipient</label><input type="text" id="to" placeholder="Anyone" maxlength="80"></div>
+          <div class="field row">
+            <div><label for="amt">Amount</label><input type="text" id="amt" readonly></div>
+            <div><label for="fee">Fee</label><input type="text" id="fee" readonly></div>
+          </div>
+          <div class="actions left" style="margin-top:22px"><button class="btn" type="submit">Send ¤0</button></div>
+        </form>
+        <div class="result mt-2" id="send-out" aria-live="polite"></div>
+      </div>
+
+      <div class="panel">
+        <div class="eyebrow">Recover</div>
+        <h3>Recover Wallet</h3>
+        <form id="recover" class="mt-2" autocomplete="off">
+          <div class="field"><label for="seed">Seed phrase (optional)</label><textarea id="seed" placeholder="Any words. Or none." spellcheck="false"></textarea></div>
+          <div class="actions left" style="margin-top:22px"><button class="btn" type="submit">Recover</button></div>
+        </form>
+        <div class="result mt-2" id="recover-out" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Keys</div>
+      <p class="quote">No keys. Maximum coins.</p>
+      <p class="muted">No seed phrase is required. There is nothing to remember. Ownership does not depend on a key.</p>
+    </section>
+  </div>
+</main>
+</body>
+</html>

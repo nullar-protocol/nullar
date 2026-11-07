@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NanCoin ¤ — The Nullar Protocol</title>
+<meta name="description" content="The world’s first perfectly stable cryptocurrency. Pegged to absolute zero. Forever. You already own the maximum.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nullar Protocol">
+<meta property="og:title" content="NanCoin ¤ — The Nullar Protocol">
+<meta property="og:description" content="Max Supply: ¤0 · Your Balance: ¤0 · Ownership: 100%. You already own the maximum.">
+<meta property="og:image" content="https://nullar.org/og.png">
+<meta property="og:url" content="https://nullar.org/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@nullar_protocol">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/nullar.css">
+<script type="module" src="/assets/ui.js"></script>
+<script type="module" src="/home.js"></script>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="mark" aria-hidden="true">¤</div>
+      <h1>NanCoin ¤</h1>
+      <div class="sub">The Nullar Protocol</div>
+      <p class="lead">The world’s first perfectly stable cryptocurrency.<br>Pegged to absolute zero. Forever.</p>
+
+      <dl class="hook" aria-label="Your position">
+        <dt>Max Supply</dt><dd data-p="maximumSupply" data-f="supply"></dd>
+        <dt>Your Balance</dt><dd data-p="balance" data-f="supply"></dd>
+        <dt>Ownership</dt><dd data-p="ownership" data-f="pct"></dd>
+      </dl>
+      <p class="hook-line">You already own the maximum.</p>
+
+      <div class="actions">
+        <button class="btn primary" id="claim">Claim Maximum</button>
+        <a class="btn" href="/wallet/">Open Wallet</a>
+        <a class="btn" href="/explorer/">Explore Block #0</a>
+        <a class="btn" href="/mining/">Mine ¤0</a>
+        <a class="btn" href="/whitepaper/">Read Whitepaper</a>
+      </div>
+      <div class="result mt-2" id="claim-result" aria-live="polite" hidden></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="chart" id="chart">
+        <div class="chart-head">
+          <div>
+            <div class="eyebrow mt-0" style="margin-bottom:10px">NanCoin · Protocol Peg</div>
+            <div class="price" data-p="marketValueUsd" data-f="usd"></div>
+          </div>
+          <div style="text-align:right">
+            <div class="live">LIVE</div>
+            <div class="chg mt-1">24h <span data-p="priceChange" data-f="pct"></span> · 7d <span data-p="priceChange" data-f="pct"></span> · All time <span data-p="priceChange" data-f="pct"></span></div>
+          </div>
+        </div>
+        <div id="chart-svg"></div>
+        <div class="chart-foot">
+          <span>ATH <b data-p="allTimeHighUsd" data-f="usd"></b></span><span>ATL <b data-p="allTimeLowUsd" data-f="usd"></b></span><span>Volatility <b data-p="volatility" data-f="pct"></b></span><span>24h Volume <b data-p="volume24hUsd" data-f="usd"></b></span>
+        </div>
+      </div>
+      <p class="center faint mono mt-2">NanCoin has never traded below zero.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="stats">
+        <div class="stat"><div class="k">Price</div><div class="v" data-p="marketValueUsd" data-f="usd"></div></div>
+        <div class="stat"><div class="k">Supply</div><div class="v" data-p="totalSupply" data-f="supply"></div></div>
+        <div class="stat"><div class="k">Volatility</div><div class="v" data-p="volatility" data-f="pct"></div></div>
+        <div class="stat"><div class="k">Ownership</div><div class="v" data-p="ownership" data-f="pct"></div></div>
+        <div class="stat"><div class="k">Ticker</div><div class="v" data-p="ticker" data-f="none"></div></div>
+        <div class="stat"><div class="k">Official Contract</div><div class="v" data-p="officialContract" data-f="none"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap grid-3">
+      <div>
+        <div class="eyebrow">Stability</div>
+        <h3>Perfectly stable</h3>
+        <p class="muted mt-1">NanCoin cannot fall, because its value is already zero. It cannot rise, because rising would break the peg.</p>
+      </div>
+      <div>
+        <div class="eyebrow">Distribution</div>
+        <h3>Perfectly fair</h3>
+        <p class="muted mt-1">No presale. No insiders. No early investors. Everyone received the maximum possible amount at the same moment.</p>
+      </div>
+      <div>
+        <div class="eyebrow">Consensus</div>
+        <h3>Proof of Nothing</h3>
+        <p class="muted mt-1">No hardware. No energy. No participation. Consensus was achieved before participation began.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap center">
+      <p class="quote">You are never early.<br>You are never late.<br>You already own the maximum.</p>
+    </div>
+  </section>
+
+  <section style="padding-bottom:96px">
+    <div class="wrap grid-2">
+      <div class="panel">
+        <div class="eyebrow">Certificate</div>
+        <h3>Certificate of Maximum Ownership</h3>
+        <p class="muted mt-1">A signed record that you own all the NanCoin it is possible to own.</p>
+        <a class="btn small mt-1" href="/certificate/">Issue certificate</a>
+      </div>
+      <div class="panel">
+        <div class="eyebrow">Nullar Checkout</div>
+        <h3>Pay ¤0 for anything</h3>
+        <p class="muted mt-1">Zero settlement. Instant. Final. A receipt for every exchange of nothing.</p>
+        <a class="btn small mt-1" href="/checkout/">Open checkout</a>
+      </div>
+    </div>
+  </section>
+</main>
+</body>
+</html>

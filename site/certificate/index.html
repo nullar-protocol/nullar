@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Certificate of Maximum Ownership — Nullar</title>
+<meta name="description" content="Certify that you own the maximum possible amount of NanCoin: ¤0. Ownership: 100%.">
+<meta property="og:title" content="Certificate of Maximum Ownership">
+<meta property="og:image" content="https://nullar.org/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/nullar.css">
+<script type="module" src="/assets/ui.js"></script>
+<script type="module" src="/certificate/certificate.js"></script>
+</head>
+<body>
+<main class="page">
+  <div class="wrap">
+    <header>
+      <div class="eyebrow">Certificate</div>
+      <h1>Certificate of Maximum Ownership</h1>
+      <p class="lead">A record that you own all the NanCoin it is possible to own.</p>
+    </header>
+
+    <section class="grid-2" style="align-items:start">
+      <div>
+        <form id="form" autocomplete="off">
+          <div class="field"><label for="name">Name or pseudonym</label><input type="text" id="name" maxlength="40" placeholder="Your name"></div>
+          <div class="field">
+            <label>Format</label>
+            <div class="row" style="gap:8px">
+              <button class="btn small primary" type="button" data-fmt="wide">Post · 1200×630</button>
+              <button class="btn small" type="button" data-fmt="tall">Story · 1080×1920</button>
+            </div>
+          </div>
+          <div class="actions left" style="margin-top:28px">
+            <button class="btn primary" type="button" id="share">Share</button>
+            <button class="btn" type="button" id="download">Download PNG</button>
+          </div>
+        </form>
+        <p class="faint mt-3" style="font-size:13px">The certificate is drawn on your device. Your name is not sent or stored. There is nothing to store.</p>
+      </div>
+      <div class="panel" style="padding:12px"><canvas id="cv" style="width:100%;height:auto;display:block" aria-label="Certificate preview"></canvas></div>
+    </section>
+  </div>
+</main>
+</body>
+</html>

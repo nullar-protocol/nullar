@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NanExplorer — Nullar Protocol</title>
+<meta name="description" content="Nullar Mainnet. Block height: 0. Blocks: 1. Transactions: 0. Finality: Absolute.">
+<meta property="og:title" content="NanExplorer — Nullar Protocol">
+<meta property="og:image" content="https://nullar.org/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/nullar.css">
+<script type="module" src="/assets/ui.js"></script>
+<script type="module" src="/explorer/explorer.js"></script>
+</head>
+<body>
+<main class="page">
+  <div class="wrap">
+    <header>
+      <div class="eyebrow">NanExplorer</div>
+      <h1><span data-p="network"></span></h1>
+      <p class="lead">Status: Perfectly Inactive.</p>
+    </header>
+
+    <section>
+      <form id="search" class="row" role="search" autocomplete="off">
+        <div style="flex:4"><label for="q">Search block, hash, address, transaction or contract</label><input type="text" id="q" placeholder="0" spellcheck="false" maxlength="128"></div>
+        <div style="flex:1;display:flex;align-items:flex-end"><button class="btn primary" type="submit" style="width:100%">Search</button></div>
+      </form>
+      <div class="panel mt-2"><div class="result" id="search-out" aria-live="polite"></div></div>
+    </section>
+
+    <section>
+      <div class="stats">
+        <div class="stat"><div class="k">Block Height</div><div class="v" data-p="blockHeight"></div></div>
+        <div class="stat"><div class="k">Blocks</div><div class="v" data-p="totalBlocks"></div></div>
+        <div class="stat"><div class="k">Transactions</div><div class="v" data-p="transactions"></div></div>
+        <div class="stat"><div class="k">Total Supply</div><div class="v" data-p="totalSupply" data-f="supply"></div></div>
+        <div class="stat"><div class="k">Circulating</div><div class="v" data-p="circulatingSupply" data-f="supply"></div></div>
+        <div class="stat"><div class="k">Market Cap</div><div class="v" data-p="marketValueUsd" data-f="usd"></div></div>
+        <div class="stat"><div class="k">Validators</div><div class="v" style="font-size:18px">Everyone / No One</div></div>
+        <div class="stat"><div class="k">Hashrate</div><div class="v" data-p="hashrate" data-f="hs"></div></div>
+        <div class="stat"><div class="k">Difficulty</div><div class="v">None</div></div>
+        <div class="stat"><div class="k">Ticker</div><div class="v" data-p="ticker" data-f="none"></div></div>
+        <div class="stat"><div class="k">Official Contract</div><div class="v" data-p="officialContract" data-f="none"></div></div>
+        <div class="stat"><div class="k">Finality</div><div class="v" data-p="finality"></div></div>
+      </div>
+    </section>
+
+    <section id="block">
+      <div class="eyebrow">Block #0 · Genesis</div>
+      <h2>Block #0</h2>
+      <table class="kv mt-2">
+        <tr><th>Status</th><td>Final</td></tr>
+        <tr><th>Finality</th><td data-p="finality"></td></tr>
+        <tr><th>Timestamp</th><td id="g-ts">—</td></tr>
+        <tr><th>Transactions</th><td id="g-tx">—</td></tr>
+        <tr><th>Block Reward</th><td id="g-reward">—</td></tr>
+        <tr><th>Total Supply</th><td id="g-supply">—</td></tr>
+        <tr><th>Previous Block</th><td id="g-prev">—</td></tr>
+        <tr><th>Next Block</th><td id="g-next">—</td></tr>
+        <tr><th>Block Hash (SHA-256)</th><td data-p="genesisHash"></td></tr>
+        <tr><th>Value Hash</th><td>0</td></tr>
+        <tr><th>Verified in your browser</th><td id="g-verify">Computing…</td></tr>
+      </table>
+
+      <div class="eyebrow mt-3">Genesis message</div>
+      <p class="quote" id="g-msg">—</p>
+
+      <div class="eyebrow mt-3">Verify independently</div>
+      <pre>curl -s https://nullar.org/genesis/genesis.json | shasum -a 256</pre>
+      <p class="muted mt-1">Expected output: <span class="mono" data-p="genesisHash"></span>. Raw block: <a href="/genesis/genesis.json">genesis.json</a> · <a href="/genesis/genesis.sha256">genesis.sha256</a></p>
+    </section>
+  </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,21 @@
+name: Protocol
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  invariants:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: 26
+      - name: Verify Genesis Block #0
+        run: sha256sum -c genesis.sha256
+        working-directory: genesis
+      - name: Protocol invariants
+        run: npm test
+      - name: Build
+        run: sh build.sh

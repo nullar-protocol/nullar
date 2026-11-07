@@ -1,0 +1,13 @@
+{
+  "name": "nullar",
+  "version": "0.0.0",
+  "description": "NanCoin ¤ — The Nullar Protocol. Pegged to absolute zero. Forever.",
+  "private": true,
+  "type": "module",
+  "license": "CC0-1.0",
+  "scripts": {
+    "test": "node --test core/*.test.js",
+    "build": "sh build.sh",
+    "start": "sh build.sh && node scripts/serve.js"
+  }
+}

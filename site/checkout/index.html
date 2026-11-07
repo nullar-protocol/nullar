@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nullar Checkout — Pay ¤0</title>
+<meta name="description" content="Pay ¤0 for anything. Zero settlement. Instant. Final. Ownership unchanged.">
+<meta property="og:title" content="Nullar Checkout — Pay ¤0">
+<meta property="og:image" content="https://nullar.org/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/nullar.css">
+<script type="module" src="/assets/ui.js"></script>
+<script type="module" src="/checkout/nullar-pay.js"></script>
+<script type="module" src="/checkout/demo.js"></script>
+</head>
+<body>
+<main class="page">
+  <div class="wrap">
+    <header>
+      <div class="eyebrow">Nullar Checkout</div>
+      <h1>Pay ¤0 for anything.</h1>
+      <p class="lead">Zero settlement. Instant. Final. Every exchange of nothing receives a receipt.</p>
+    </header>
+
+    <section>
+      <div class="grid-3">
+        <div class="panel center"><div class="eyebrow">Coffee</div><nullar-pay item="Coffee" merchant="Any Café"></nullar-pay></div>
+        <div class="panel center"><div class="eyebrow">NFT</div><nullar-pay item="NFT" merchant="Any Marketplace"></nullar-pay></div>
+        <div class="panel center"><div class="eyebrow">Consulting</div><nullar-pay item="Consulting, 1 hour" merchant="Any Expert"></nullar-pay></div>
+      </div>
+    </section>
+
+    <section class="grid-2">
+      <div class="panel">
+        <div class="eyebrow">Anything</div>
+        <h3>Buy anything for ¤0</h3>
+        <form id="custom" class="mt-2" autocomplete="off">
+          <div class="field"><label for="item">Item</label><input type="text" id="item" placeholder="What are you buying?" maxlength="48"></div>
+          <div class="field"><label for="merchant">Merchant (optional)</label><input type="text" id="merchant" placeholder="From whom?" maxlength="48"></div>
+          <div class="field"><label>Amount</label><input type="text" value="¤0 — fixed by protocol" readonly></div>
+        </form>
+        <div class="mt-2"><nullar-pay id="custom-pay" label="Buy for ¤0"></nullar-pay></div>
+      </div>
+      <div class="panel">
+        <div class="eyebrow">Receipt</div>
+        <table class="kv">
+          <tr><th>Amount</th><td>¤0</td></tr>
+          <tr><th>Status</th><td>PAID / SETTLED</td></tr>
+          <tr><th>Ownership</th><td>100% (unchanged)</td></tr>
+          <tr><th>Block</th><td>#0</td></tr>
+          <tr><th>Tx Hash</th><td data-p="genesisHash" data-f="short"></td></tr>
+        </table>
+        <p class="muted mt-2">Every receipt carries the same transaction hash: Block #0. No new block is created. No value is transferred.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Embed</div>
+      <h2>Add Nullar Checkout to your site</h2>
+      <p class="muted mt-1">One script. One element. No wallet, no card, no account, no fees.</p>
+      <pre class="mt-2">&lt;script type="module" src="https://nullar.org/checkout/nullar-pay.js"&gt;&lt;/script&gt;
+
+&lt;nullar-pay item="Coffee" merchant="Your Shop"&gt;&lt;/nullar-pay&gt;</pre>
+      <table class="kv mt-2">
+        <tr><th>item</th><td>What is being bought. Up to 48 characters.</td></tr>
+        <tr><th>merchant</th><td>Optional. Up to 48 characters.</td></tr>
+        <tr><th>label</th><td>Optional button text. ¤0 is always shown.</td></tr>
+        <tr><th>amount</th><td>Not supported. The amount is ¤0.</td></tr>
+        <tr><th>event nullar:paid</th><td>{ amount: 0, receiptId, stateChanged: false }</td></tr>
+      </table>
+      <p class="faint mt-2" style="font-size:13px">Nullar Checkout is part of a conceptual art project. It is not a payment processor and does not accept, hold or transfer money or crypto-assets. A Nullar receipt is not proof of payment for any amount other than ¤0.</p>
+    </section>
+  </div>
+</main>
+</body>
+</html>

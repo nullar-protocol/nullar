@@ -1,0 +1,11 @@
+@page { size: A4; margin: 22mm 20mm; }
+:root { --bg: #fff; --surface: #fff; --ink: #111; --ink-2: #444; --ink-3: #777; --line: #ddd; --line-2: #ccc; }
+body { background: #fff; font-size: 11pt; }
+.hdr, .ftr, .actions { display: none !important; }
+.page { padding: 0; }
+.wrap { max-width: none; padding: 0; }
+.prose { max-width: none; }
+h1 { font-size: 26pt; }
+.prose h2 { font-size: 15pt; margin: 22pt 0 8pt; break-after: avoid; }
+pre { break-inside: avoid; font-size: 9.5pt; white-space: pre-wrap; word-break: break-all; }
+a { text-decoration: none; }

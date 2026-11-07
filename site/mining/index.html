@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NanMining — Nullar Protocol</title>
+<meta name="description" content="Proof of Nothing. Hashrate: 0 H/s. Expected reward: ¤0.">
+<meta property="og:title" content="NanMining — Nullar Protocol">
+<meta property="og:image" content="https://nullar.org/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/nullar.css">
+<script type="module" src="/assets/ui.js"></script>
+<script type="module" src="/mining/mining.js"></script>
+</head>
+<body>
+<main class="page">
+  <div class="wrap">
+    <header>
+      <div class="eyebrow">NanMining · <span data-p="consensus"></span></div>
+      <h1>NanCoin Miner</h1>
+      <p class="lead">The greenest blockchain is the one that does nothing.</p>
+    </header>
+
+    <section>
+      <div class="stats">
+        <div class="stat"><div class="k">Status</div><div class="v">Ready</div></div>
+        <div class="stat"><div class="k">Hashrate</div><div class="v" data-p="hashrate" data-f="hs"></div></div>
+        <div class="stat"><div class="k">Power</div><div class="v" data-p="powerWatts" data-f="w"></div></div>
+        <div class="stat"><div class="k">Expected Reward</div><div class="v" data-p="blockReward" data-f="supply"></div></div>
+      </div>
+      <div class="actions left"><button class="btn primary" id="mine">Start Mining</button></div>
+      <div class="panel mt-2"><div class="result" id="out" aria-live="polite"></div></div>
+    </section>
+
+    <section class="grid-2">
+      <div>
+        <div class="eyebrow">How to mine NanCoin</div>
+        <pre>1. Turn off your computer.
+2. Do nothing.
+3. Your mining efficiency remains unchanged.</pre>
+      </div>
+      <div>
+        <div class="eyebrow">Block reward</div>
+        <table class="kv">
+          <tr><th>Initial Reward</th><td data-p="blockReward" data-f="supply"></td></tr>
+          <tr><th>After Halving</th><td data-p="blockReward" data-f="supply"></td></tr>
+          <tr><th>Final Reward</th><td data-p="blockReward" data-f="supply"></td></tr>
+          <tr><th>Energy Consumption</th><td data-p="energyKwh" data-f="kwh"></td></tr>
+          <tr><th>Carbon Footprint</th><td data-p="carbonFootprint"></td></tr>
+        </table>
+        <p class="mono mt-2">NanCoin completed all halvings at launch.</p>
+      </div>
+    </section>
+  </div>
+</main>
+</body>
+</html>
