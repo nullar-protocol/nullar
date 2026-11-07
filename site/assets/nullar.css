@@ -62,9 +62,19 @@ a:hover { text-decoration-thickness: 2px; }
 .nav::-webkit-scrollbar { display: none; }
 .nav a { text-decoration: none; color: var(--ink-2); white-space: nowrap; }
 .nav a:hover, .nav a[aria-current="page"] { color: var(--ink); }
+/* Bottom tab bar (mobile only) */
+.tabbar { display: none; }
 @media (max-width: 760px) {
-  .hdr .wrap { height: auto; flex-direction: column; align-items: flex-start; padding-top: 14px; padding-bottom: 10px; gap: 10px; }
-  .nav { width: 100%; gap: 18px; }
+  .hdr .wrap { height: 52px; }
+  .hdr .nav { display: none; }
+  .tabbar { display: grid; grid-template-columns: repeat(6, 1fr); position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
+    background: var(--bg); border-top: 1px solid var(--line); padding-bottom: env(safe-area-inset-bottom); }
+  .tabbar a { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; min-width: 0; height: 58px;
+    text-decoration: none; color: var(--ink-3); }
+  .tabbar a[aria-current="page"] { color: var(--ink); }
+  .tabbar .ti { font-size: 19px; line-height: 1; }
+  .tabbar .tl { font-size: 10px; line-height: 1; letter-spacing: 0.01em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+  body { padding-bottom: calc(58px + env(safe-area-inset-bottom)); }
 }
 
 /* Typography */
@@ -85,7 +95,7 @@ p { margin: 0 0 1em; }
 .page > .wrap > header { margin-bottom: 48px; }
 .page > .wrap > header .lead { margin-top: 14px; }
 section + section { margin-top: 72px; }
-@media (max-width: 600px) { .page { padding: 44px 0 72px; } section + section { margin-top: 56px; } }
+@media (max-width: 600px) { .page { padding: 20px 0 48px; } .page > .wrap > header { margin-bottom: 28px; } section + section { margin-top: 48px; } }
 
 /* Hero */
 .hero { padding: 88px 0 64px; text-align: center; }
@@ -93,6 +103,7 @@ section + section { margin-top: 72px; }
 .hero h1 { font-size: clamp(40px, 7vw, 68px); }
 .hero .sub { font: 500 13px/1 var(--mono); letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-2); margin-top: 16px; }
 .hero .lead { margin: 30px auto 0; }
+@media (max-width: 600px) { .hero { padding: 16px 0 36px; } .hero .mark { font-size: 92px; margin-bottom: 10px; } .hero .lead { margin-top: 18px; } }
 .hook { display: inline-grid; grid-template-columns: auto auto; gap: 6px 36px; margin: 44px auto 0; font-family: var(--mono); font-size: clamp(16px, 2.4vw, 20px); text-align: left; }
 .hook dt { color: var(--ink-2); }
 .hook dd { margin: 0; text-align: right; font-weight: 600; }

@@ -16,12 +16,12 @@ export const fmt = {
 };
 
 const NAV = [
-  ['/wallet/', 'Wallet'],
-  ['/explorer/', 'Explorer'],
-  ['/mining/', 'Mining'],
-  ['/checkout/', 'Checkout'],
-  ['/certificate/', 'Certificate'],
-  ['/whitepaper/', 'Whitepaper'],
+  ['/wallet/', 'Wallet', '¤', 'Wallet'],
+  ['/explorer/', 'Explorer', '#', 'Explorer'],
+  ['/mining/', 'Mining', '∅', 'Mining'],
+  ['/checkout/', 'Checkout', '✓', 'Pay'],
+  ['/certificate/', 'Certificate', '◎', 'Certificate'],
+  ['/whitepaper/', 'Whitepaper', '¶', 'Paper'],
 ];
 
 const FOOT = [
@@ -55,6 +55,23 @@ function header() {
   const nav = h.querySelector('nav');
   NAV.forEach((n) => nav.append(link(n, true)));
   return h;
+}
+
+// Mobile: the main nav lives in a bottom tab bar instead of the header.
+function tabbar() {
+  const t = document.createElement('nav');
+  t.className = 'tabbar';
+  t.setAttribute('aria-label', 'Main');
+  NAV.forEach(([href, label, icon, short]) => {
+    const a = link([href, label], true);
+    a.textContent = '';
+    const i = document.createElement('span'); i.className = 'ti'; i.setAttribute('aria-hidden', 'true'); i.textContent = icon;
+    const l = document.createElement('span'); l.className = 'tl'; l.textContent = short;
+    a.append(i, l);
+    a.setAttribute('aria-label', label);
+    t.append(a);
+  });
+  return t;
 }
 
 function footer() {
@@ -166,5 +183,6 @@ export function mountChart(el) {
 // ---------- Boot ----------
 
 document.body.prepend(header());
+document.body.append(tabbar());
 document.body.append(footer());
 bind();
