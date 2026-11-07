@@ -204,3 +204,6 @@ textarea { min-height: 88px; resize: vertical; }
 /* Overflow guards */
 .grid-2 > *, .grid-3 > *, .row > * { min-width: 0; }
 p .mono, td.mono { word-break: break-all; }
+
+/* Checkout widget follows the site theme */
+nullar-pay { --nullar-pay-bg: var(--ink); --nullar-pay-fg: var(--bg); }

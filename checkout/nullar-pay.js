@@ -95,9 +95,9 @@ export function drawReceipt(r) {
 
 const CSS = `
 :host { display: inline-block; font-family: ${SANS}; }
-button.pay { appearance: none; border: 1px solid #111; background: #111; color: #fff; font: 600 15px/1 ${SANS};
+button.pay { appearance: none; border: 1px solid var(--nullar-pay-bg, #111); background: var(--nullar-pay-bg, #111); color: var(--nullar-pay-fg, #fff); font: 600 15px/1 ${SANS};
   padding: 0 20px; min-height: 44px; border-radius: 2px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
-button.pay:hover { background: #fff; color: #111; }
+button.pay:hover { background: var(--nullar-pay-fg, #fff); color: var(--nullar-pay-bg, #111); }
 .ov { position: fixed; inset: 0; background: rgba(0,0,0,.72); display: flex; align-items: center; justify-content: center; padding: 16px; z-index: 2147483647; }
 .box { background: #fff; color: #111; max-width: 420px; width: 100%; max-height: 100%; overflow: auto; border-radius: 4px; padding: 16px; }
 .box img { width: 100%; display: block; border: 1px solid #e5e5e5; }
