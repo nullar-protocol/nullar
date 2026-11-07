@@ -58,6 +58,7 @@ core/nothing.js       reference implementation of the protocol
 core/nothing.test.js  invariants
 genesis/              Block #0 and its hash
 checkout/             Nullar Checkout — <nullar-pay> web component
+packages/checkout/    npm package @nullar/checkout (sh scripts/pack-checkout.sh)
 site/                 static pages
 whitepaper/           PDF (rendered from /whitepaper/)
 scripts/              local preview, OG image and PDF rendering

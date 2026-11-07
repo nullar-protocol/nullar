@@ -1,0 +1,20 @@
+{
+  "name": "@nullar/checkout",
+  "version": "0.0.0",
+  "description": "Nullar Checkout — a drop-in payment button that accepts ¤0. The amount cannot be changed.",
+  "type": "module",
+  "main": "./checkout/nullar-pay.js",
+  "exports": {
+    ".": "./checkout/nullar-pay.js",
+    "./core": "./core/nothing.js",
+    "./protocol.json": "./protocol.json"
+  },
+  "files": ["checkout/nullar-pay.js", "core/nothing.js", "protocol.json"],
+  "sideEffects": ["./checkout/nullar-pay.js"],
+  "keywords": ["checkout", "payment-button", "web-component", "zero", "conceptual-art", "nancoin", "nullar"],
+  "homepage": "https://nullar.org/checkout/",
+  "repository": { "type": "git", "url": "git+https://github.com/nullar-protocol/nullar.git", "directory": "packages/checkout" },
+  "bugs": "https://github.com/nullar-protocol/nullar/issues",
+  "license": "CC0-1.0",
+  "dependencies": {}
+}
